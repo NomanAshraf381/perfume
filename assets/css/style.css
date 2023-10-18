@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#tbars{
+    display: none;
+}
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px 5%;
+    align-items: center;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+nav ul li{
+    display: inline;
+    margin-right: 25px;
+    overflow: hidden;
+}
+nav ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    padding: 20px 0;
+    position: relative;
+}
+nav ul li a::after, nav i::after{
+    content: '';
+    display: block;
+    z-index: 10;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: -50px;
+    opacity: 0;
+}
+nav ul li a:hover::after, nav i:hover:after{
+    left: 0;
+    opacity: 1;
+    transition: .5s;
+}
+nav+ul{
+    justify-self: left;
+}
+.logo{
+    justify-self: center;
+}
+nav .right-side{
+    display: flex;
+    align-items: center;
+    justify-self: right;
+}
+.hone{
+    display: none;
+}
+nav i{
+    margin: 0 10px;
+    font-size: 20px !important;
+}
+#upper-text{
+    height: 100vh;
+    background-image: url(../img/header-bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.text-content{
+    width: 50%;
+    height: 100%;
+    padding: 80px 5%;
+}
+.text-content span, .grid-content span, .bestselling>span, .edition span, .category span{
+    font-weight: 700;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 3px;
+}
+.text-content h1{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 88px;
+    font-weight: 400;
+    line-height: .9;
+    margin: 50px 0;
+}
+.text-content a, .grid-content a{
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    padding: 15px 20px;
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    border: 1px solid black;
+}
+.text-content a:hover, .grid-content a:hover, .nperfume-content a:hover, .edition-content a:hover{
+    background-color: white;
+    color: black;
+    transition: .4s;
+}
+.newfrag{
+    padding: 100px 5% 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.image-part{
+    overflow: hidden;
+    position: relative;
+}
+.image-part img:first-of-type{
+    width: 43%;
+    aspect-ratio: 3/4;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.image-part1 img:first-of-type{
+    left: 0;
+}
+.image-part2 img:first-of-type{
+    right: 0;
+}
+.image-part img:last-of-type{
+    float: right;
+    width: 80%;
+}
+.image-part2 img:last-of-type{
+    float: left;
+}
+
+.image-part:hover img:first-of-type{
+    transition: 1s;
+    transform:translate(0, -50%) scale(1.1);
+}
+.grid-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    padding-left: 150px;
+}
+.grid-content2{
+    text-align: left;
+    padding-left: 0;
+    padding-right: 150px;
+}
+.grid-content h2, .bestselling>h2, .category h2{
+    font-size: 68px;
+    font-weight: 400;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: .9;
+    margin-top: 15px;
+}
+.grid-content p{
+    padding: 30px 0;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(91,91,91);
+    line-height: 24px;
+}
+.grid-content div{
+    margin-top: 25px;
+}
+.bestselling{
+    padding: 100px 5% 0;
+    text-align: center;
+}
+.bselling-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:20px ;
+    margin-top: 40px;
+}
+.bselling-card:hover img, .new-perfume img:hover{
+    scale: 1.05;
+    transition: .5s;
+    
+}
+.bselling-card img{
+    width: 100%;
+}
+.bs-cardtext{
+    padding: 10px;
+    text-align: left;
+}
+.bselling-card span{
+    font-size: .85em;
+    margin-bottom: 0.5em;
+    display: block;
+    line-height: 1.3;
+    opacity: .6;
+    color: rgb(89, 70, 70);
+    font-family: 'Poppins', sans-serif;
+}
+.bs-cardtext h3{
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Cormorant Garamond',serif;
+}
+.stars i{
+    font-size: 13px;
+    color: rgb(242,146,30);
+}
+.bs-cardtext bdi{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.3;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgb(91,91,91);
+    margin: 7px 0;
+    display: block;
+}
+.new-perfume{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 80px 5% 0;
+}
+.nperfume-imgs{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.nperfume-content{
+    text-align: center;
+    padding: 30px 5%;
+    margin: 50px;
+    position: relative;
+}
+.nperfume-content::before, .category-cards::before{
+    content: '';
+    display: block;
+    width: 70px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50% 0;
+}
+.nperfume-content h3{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Cormorant Garamond',serif;
+}
+.nperfume-content div, .edition-content div{
+    margin-top: 30px;
+}
+.edition{
+    margin: 20px 5%;
+    background-image: url(../img/bigbg2.jpg);
+    background-size: cover;
+    padding: 80px 5%;
+    position: relative;
+}
+.edition-content{
+    color: white;
+    width: 30%;
+}
+.edition-content h2{
+    font-size: 55px;
+    font-weight: 400;
+    font-family: 'Cormorant Garamond',serif;
+    line-height: 0.9em;
+    margin: 10px 0;
+}
+.edition-content p{
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 24px;
+}
+.edition-content a, .nperfume-content a{
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    border: 1px solid black;   
+}
+.edition>img{
+    position: absolute;
+    width: 260px;
+    left: 50%;
+    bottom: -70px;
+    translate: -50% 0;
+}
+.edition:hover>img{
+    bottom: -10px;
+    transition: .5s;
+}
+.category{
+    padding: 140px 5% 0;
+    text-align: center;
+}
+.category-cards{
+    padding-top: 50px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px;
+    position: relative;
+}
+.category-card{
+    position: relative;
+    overflow: hidden;
+}
+.category-card img{
+    width: 100%;
+}
+.category-text{
+    position: absolute;
+    bottom: 17px;
+    left: 4%;
+    background-color: white;
+    width: 92%;
+    padding: 5px;
+}
+.category-card:hover .category-text{
+    background-color: rgba(255, 255, 255, 0.785);
+    transition: .5s;
+}
+.category-card:hover img{
+    transition: .5s;
+    scale: 1.05;
+}
+.category-text h3{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+}
+.category-text span{
+    font-size: 15px;
+}
+footer{
+    color: white;
+    margin-top: 90px;
+    background-color: black;
+    padding: 80px 5%;
+}
+.upper-footer{
+    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    font-family: 'Poppins', sans-serif;
+}
+.upper-footer p{
+    letter-spacing: 1px;
+    line-height: 1.7;
+    font-size: 15px;
+    margin-top: 30px;
+
+}
+.upper-footer h2{
+    font-weight: 500;
+    font-size: 29px;
+    margin-bottom: 40px;
+}
+.contacts{
+    margin-top: 10px;
+}
+.contacts span{
+    display: block;
+    padding: 5px;
+}
+.contacts span b{
+    display: block;
+    margin: 5px 0;
+}
+.contacts span:hover{
+    cursor: default;
+    color: black;
+    background-color: white;
+}
+.follow-us ul, .useful-links ul{
+    margin-top: 30px;
+    list-style-type: none;
+}
+.follow-us a, .useful-links a{
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    font-size: 15px;
+    padding: 6px;
+    display: inline-block;
+}
+.follow-us li:hover, .useful-links li:hover{
+    color: black;
+    background-color: white;
+}
+@media screen and (max-width: 1100px) {
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hone{
+        display: block;
+    }
+    .right-side ul{
+        display: none;
+    }   
+    nav>ul{
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 30px;
+        background-color: white;
+    }
+    nav>ul.navact{
+        display: block;
+    }
+    nav>ul li{
+        display: block;
+        padding: 10px;
+    }
+    #tbars{
+        display: inline-block;
+    }
+    #upper-text{
+        background-position: bottom;
+    }
+    .text-content{
+        width: 70%;
+        height: 100%;
+        padding: 60px 5%;
+    }
+    .text-content h1{
+        font-size: 75px;
+    }
+    .grid-content{
+        padding: 20px 0;
+        padding-left: 100px;
+    }
+    .grid-content2{
+        padding-right: 100px;
+    }
+    .grid-content h2{
+        font-size: 60px;
+    }
+    .nperfume-content{
+        padding: 30px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .newfrag{
+        grid-template-columns: 1fr;
+    }
+    .grid-content h2 br{
+        display: none;
+    }
+    .image-part img:last-of-type{
+        width: 100%;
+        float: none;
+    }
+    .image-part img:first-of-type{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .grid-content{
+        padding: 70px 5%;
+        text-align: center;
+    }
+    .grid-content2{
+        order: 4;
+    }
+    .bestselling{
+        padding-top: 30px;
+    }
+    .bselling-cards, .upper-footer{
+        grid-template-columns: 1fr 1fr;
+    }
+    .new-perfume{
+        grid-template-columns: 1fr;
+    }
+    .new-perfume>img{
+        display: none;
+    }
+    .nperfume-content{
+        padding: 20px;
+        margin: 30px;
+    }
+    .edition{
+        background-position: center;
+    }
+    .edition>img{
+        display: none;
+    }
+    .edition-content{
+        width: 50%;
+    }
+    .category{
+        padding-top: 50px;
+    }
+    .text-content h1{
+        font-size: 70px;
+    }
+    .grid-content h2, .bestselling h2, .category h2{
+        font-size: 57px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #upper-text{
+        padding: 90px 0;
+        height: auto;
+    }
+    
+    .text-content{
+        width: 100%;
+        text-align: center;
+        height: auto;
+        padding: 50px 5%;
+    }
+    .text-content h1{
+        font-size: 70px;
+    }
+    .category-cards, .nperfume-imgs{
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+    .grid-content{
+        padding: 60px 5%;
+    }
+    .text-content h1{
+        font-size: 65px;
+    }
+    .grid-content h2, .bestselling h2, .category h2{
+        font-size: 52px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .bselling-cards, .upper-footer{
+        grid-template-columns: 1fr;
+    }
+    .image-part img:first-of-type{
+        display: none;
+    }
+    .text-content h1{
+        font-size: 60px;
+    }
+    .grid-content h2, .bestselling h2, .category h2{
+        font-size: 47px;
+    }
+    .grid-content{
+        padding: 50px 5%;
+    }
+    .upper-footer h2{
+        font-size: 25px;
+    }
+    .edition-content{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .text-content {
+        padding: 40px 5%;
+    }
+    .text-content h1{
+        font-size: 55px;
+    }
+    .grid-content h2, .bestselling h2, .category h2{
+        font-size: 40px;
+    }
+
+    .upper-footer h2{
+        text-align: center;
+    }
+}
